@@ -1,48 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-	document.body.style.margin = "0";
-	document.body.style.padding = "0";
-	document.body.style.backgroundColor = "#333";
-
 	const message = document.createElement("div");
-	message.style.position = "fixed";
-	message.style.top = "0";
-	message.style.left = "0";
-	message.style.width = "100%";
-	message.style.padding = "0.5em";
-	message.style.backgroundColor = "#222";
-	message.style.color = "#0f0";
-	message.style.fontFamily = "monospace";
-	message.style.fontSize = "1.5em";
-	message.style.boxSizing = "border-box";
-	message.style.display = "flex";
-	message.style.justifyContent = "flex-start";
-	message.style.alignItems = "center";
+	message.className = "message";
 
 	const messageText = document.createElement("div");
 	messageText.textContent = "Type and echo two letters";
 
 	const logo = document.createElement("div");
+	logo.className = "logo";
 	logo.textContent = "typtut";
-	logo.style.color = "#fc8";
-	logo.style.paddingLeft = "0.1em";
-	logo.style.paddingRight = "1em";
-	logo.style.minWidth = "1ch";
-	logo.style.textAlign = "center";
 
 	message.appendChild(logo);
 	message.appendChild(messageText);
 	document.body.appendChild(message);
 
 	const history = document.createElement("div");
-	history.style.whiteSpace = "pre-line";
-	history.style.paddingTop = "3em";
-	history.style.paddingBottom = "3em";
-	history.style.maxHeight = "80vh";
-	history.style.overflowY = "auto";
-	history.style.backgroundColor = "#333";
-	history.style.color = "#0f0";
-	history.style.fontFamily = "monospace";
-	history.style.fontSize = "1.5em";
+	history.className = "history";
 	document.body.appendChild(history);
 
 	const dummy = document.createElement("div");
@@ -50,29 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	history.appendChild(dummy);
 
 	const prompt = document.createElement("div");
-	prompt.style.position = "fixed";
-	prompt.style.bottom = "0";
-	prompt.style.left = "0";
-	prompt.style.width = "100%";
-	prompt.style.padding = "0.5em";
-	prompt.style.backgroundColor = "#111";
-	prompt.style.color = "#0f0";
-	prompt.style.fontFamily = "monospace";
-	prompt.style.fontSize = "1.5em";
-	prompt.style.boxSizing = "border-box";
-	prompt.style.display = "flex";
-	prompt.style.justifyContent = "flex-start";
-	prompt.style.alignItems = "center";
+	prompt.className = "prompt";
 
 	const promptText = document.createElement("div");
 	promptText.textContent = "> ";
 
 	const display = document.createElement("div");
-	display.style.color = "#0ff";
-	display.style.paddingLeft = "0.5em";
-	display.style.paddingRight = "0.5em";
-	display.style.minWidth = "1ch";
-	display.style.textAlign = "center";
+	display.className = "display";
 
 	prompt.appendChild(display);
 	prompt.appendChild(promptText);
